@@ -13,7 +13,7 @@ import static service.QuanLiDoanhThu.doanhThuNgay;
 public class ReadWriteFile {
     //BaiGiuXe baiGiuXe=new BaiGiuXe();
     public  void vietFileDanhSachXe() {
-        File file = new File("D:\\workSpace\\caseStudyModule2\\CaseStudyModule2\\src\\data\\quanLiXe.txt");
+        File file = new File("data\\quanLiXe.txt");
         try {
             BufferedWriter nhapDuLieu = new BufferedWriter(new FileWriter(file));
             for (Xe x : danhSachXe) {
@@ -30,7 +30,7 @@ public class ReadWriteFile {
         }
     }
     public void docFileDanhSachXe() {
-        File file = new File("D:\\workSpace\\caseStudyModule2\\CaseStudyModule2\\src\\data\\quanLiXe.txt");
+        File file = new File("data\\quanLiXe.txt");
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line = "";
@@ -49,7 +49,7 @@ public class ReadWriteFile {
         }
     }
     public  void vietFileLichSu() {
-        File file = new File("D:\\workSpace\\caseStudyModule2\\CaseStudyModule2\\src\\data\\lichSu.txt");
+        File file = new File("data\\lichSu.txt");
         try {
             BufferedWriter nhapDuLieu = new BufferedWriter(new FileWriter(file));
             for (String str : lichSuRaVao) {
@@ -61,7 +61,7 @@ public class ReadWriteFile {
         }
     }
     public  void docFileLichSu() {
-        File file = new File("D:\\workSpace\\caseStudyModule2\\CaseStudyModule2\\src\\data\\lichSu.txt");
+        File file = new File("data\\lichSu.txt");
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String line = "";
@@ -74,7 +74,7 @@ public class ReadWriteFile {
         }
     }
     public  void vietFileDoanhThuNgay() {
-        File file = new File("D:\\workSpace\\caseStudyModule2\\CaseStudyModule2\\src\\data\\doanhThuNgay.txt");
+        File file = new File("data\\doanhThuNgay.txt");
         try {
             BufferedWriter nhapDuLieu = new BufferedWriter(new FileWriter(file));
             for (String str : doanhThuNgay) {
@@ -87,7 +87,7 @@ public class ReadWriteFile {
     }
 
     public  void docFileDoanhThuNgay() {
-        File file = new File("D:\\workSpace\\caseStudyModule2\\CaseStudyModule2\\src\\data\\doanhThuNgay.txt");
+        File file = new File("data\\doanhThuNgay.txt");
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String line = "";
@@ -100,7 +100,7 @@ public class ReadWriteFile {
         }
     }
     public  void vietFileGia(){
-        File file= new File("D:\\workSpace\\caseStudyModule2\\CaseStudyModule2\\src\\data\\giaGiuXe.txt");
+        File file= new File("data\\giaGiuXe.txt");
         try {
             BufferedWriter nhapDuLieu = new BufferedWriter(new FileWriter(file));
             String gia = String.valueOf(giaTienGiuXe);
@@ -111,7 +111,7 @@ public class ReadWriteFile {
         }
     }
     public  void docFileGia(){
-        File file = new File("D:\\workSpace\\caseStudyModule2\\CaseStudyModule2\\src\\data\\giaGiuXe.txt");
+        File file = new File("data\\giaGiuXe.txt");
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             int gia = Integer.parseInt(reader.readLine());
