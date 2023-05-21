@@ -1,5 +1,6 @@
 package quanLiFile;
 
+import object.User;
 import object.Xe;
 
 import java.io.*;
@@ -9,6 +10,7 @@ import static object.BaiGiuXe.*;
 import static service.LichSuXeRaVaoBai.addLichSu;
 import static service.LichSuXeRaVaoBai.lichSuRaVao;
 import static service.QuanLiDoanhThu.doanhThuNgay;
+import static service.UserManager.userList;
 
 public class ReadWriteFile {
     //BaiGiuXe baiGiuXe=new BaiGiuXe();
@@ -117,6 +119,32 @@ public class ReadWriteFile {
             int gia = Integer.parseInt(reader.readLine());
             setGiaTienGiuXe(gia);
             reader.close();
+        } catch (Exception e) {
+
+        }
+    }
+    public static void vietFileTaikhoan(){
+        File file = new File("data\\taiKhoan.csv");
+        try {
+            BufferedWriter nhapDuLieu = new BufferedWriter(new FileWriter(file));
+            for (User u : userList) {
+                nhapDuLieu.write(u.getFullName()+","+u.getUserName()+","+u.getPassWord()+","+u.getType()+"\n");
+            }
+            nhapDuLieu.close();
+        } catch (Exception e) {
+
+        }
+    }
+    public  void docFileTaiKhoan(){
+        File file = new File("data\\taikhoan.csv");
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line = "";
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] str=line.split(",");
+                userList.add(new User().setFullName(str[0]).setUserName(str[1]).setPassWord(str[2]).setType(Integer.parseInt(str[3])));
+            }
+            bufferedReader.close();
         } catch (Exception e) {
 
         }

@@ -8,6 +8,16 @@ public class View {
         System.out.println("3. In phiếu xe và hoá đơn");
         System.out.println("4. Quản lí lịch sử xe ra vào sữ dụng bãi");
         System.out.println("5. Quản lí doanh thu");
+        System.out.println("6. Quản lí tài khoản đăng nhập");
+        System.out.println("7. Đăng xuất");
+        System.out.println("0. Để thoát chương trình");
+    }
+    public void showMainMenuOfStaff(){
+        System.out.println("\n===== Quản lý bãi giữ xe =====");
+        System.out.println("1. Quản lí hoạt động của bãi giữ xe");
+        System.out.println("2. Quản lí xe trong bãi");
+        System.out.println("3. In phiếu xe và hoá đơn");
+        System.out.println("4. Dăng xuất");
         System.out.println("0. Để thoát chương trình");
     }
     public  void showReturnOrBackMenu() {
@@ -51,5 +61,12 @@ public class View {
         System.out.println("4. Lịch sử xe rời bãi trong ngày");
         System.out.println("5. Lịch sử xe vào bãi trong ngày");
         System.out.println("0. Để quay lại Menu");
+    }
+    public void showQuanLiTaiKhoan(){
+        System.out.println("\n===== Quản lí tài khoản =====");
+        System.out.println("1. Danh sách tài khoản");
+        System.out.println("2. tạo tài khoản");
+        System.out.println("3. Xoá tài khoản");
+        System.out.println("0. Để quay lại");
     }
 }

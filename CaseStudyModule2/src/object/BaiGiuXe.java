@@ -95,6 +95,7 @@ public class BaiGiuXe {
             if (Objects.equals(bienSo, xe.getBienSo())) {
                 inHoaDontheoBienSo(xe.getBienSo());
                 danhSachXe.remove(xe);
+                readWriteFile.vietFileDanhSachXe();
                 cacBaiDoXe[xe.getBaiDoXe() - 1] = false;
                 System.out.println("lấy xe thành công");
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
@@ -118,6 +119,7 @@ public class BaiGiuXe {
             if (Objects.equals(id, xe.getId())) {
                 inHoaDontheoBienSo(xe.getBienSo());
                 danhSachXe.remove(xe);
+                readWriteFile.vietFileDanhSachXe();
                 cacBaiDoXe[xe.getBaiDoXe() - 1] = false;
                 System.out.println("lấy xe thành công");
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");

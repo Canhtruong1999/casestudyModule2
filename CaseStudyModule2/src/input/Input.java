@@ -1,9 +1,12 @@
 package input;
 
+import object.User;
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import static object.BaiGiuXe.cacBaiDoXe;
+import static service.UserManager.userList;
 
 public class Input {
     public static int nhapLuaChon() {
@@ -87,5 +90,18 @@ public class Input {
             System.out.println("nhập lại đúng định dạng của tháng: mm");
             return nhapThang();
         }
+    }
+    public static int DangNhap(){
+        System.out.println("Tên tài khoản");
+        String userName=nhapChuoi();
+        System.out.println("Mật khẩu");
+        String passWord=nhapChuoi();
+        for (User u:userList) {
+            if(userName.equals(u.getUserName())&& passWord.equals(u.getPassWord())){
+                return u.getType();
+            }
+        }
+        System.out.println("tài khoản hoặc mật khẩu sai ,mời  nhập lại");
+        return DangNhap();
     }
 }
